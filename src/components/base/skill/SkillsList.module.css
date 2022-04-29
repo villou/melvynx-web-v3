@@ -1,0 +1,10 @@
+.rainbowIcon > svg {
+  background-color: linear-gradient(
+    92.72deg,
+    var(--color-primary) 0%,
+    #765eed 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
