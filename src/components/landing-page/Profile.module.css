@@ -1,0 +1,17 @@
+.profileHeight {
+  min-height: calc(100vh - 40px - 32px);
+}
+
+.pointBg {
+  left: -16px;
+  top: -16px;
+  position: absolute;
+}
+
+.picture {
+  transition: filter 500ms var(--ease-in-out);
+}
+
+.picture:hover {
+  filter: hue-rotate(30deg);
+}

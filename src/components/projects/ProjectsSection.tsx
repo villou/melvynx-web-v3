@@ -1,5 +1,5 @@
 import React from 'react';
-import { Section } from '../index/Section';
+import { Section } from '../landing-page/Section';
 import { ProjectCard } from './project-card/ProjectCard';
 import { projectsData } from './projects.data';
 

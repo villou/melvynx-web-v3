@@ -2,13 +2,14 @@ import React, { FormEvent } from 'react';
 
 export function EmailsForm({
   placeholder = 'Your email address',
+  callToAction = 'Join',
 }: {
   placeholder?: string;
+  callToAction?: string;
 }) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // get query params
     const query = new URLSearchParams(window.location.search);
 
     const value = e.currentTarget.email.value;
@@ -38,7 +39,7 @@ export function EmailsForm({
         type="submit"
         className="bg-primary text-black px-6 py-3 w-full rounded-md"
       >
-        Rejoindre
+        {callToAction}
       </button>
     </form>
   );
