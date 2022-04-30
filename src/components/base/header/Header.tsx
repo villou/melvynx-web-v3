@@ -1,5 +1,5 @@
 import React from 'react';
-import { headerData } from './header-data';
+import { headerData } from './header.data';
 import HeaderItem from './HeaderItem';
 
 export function Header() {

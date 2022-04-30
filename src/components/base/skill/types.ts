@@ -3,3 +3,8 @@ export type SkillItem = {
   title: string;
   isRainbow?: boolean;
 };
+
+export type SkillList = {
+  title: string;
+  items: SkillItem[];
+};
