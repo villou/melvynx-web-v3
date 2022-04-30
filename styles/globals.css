@@ -22,7 +22,14 @@
 */
 
 * {
-  --color-primary: #28f1fe;
+  --rgb-primary-color: 40, 241, 254;
+  --color-primary: rgb(var(--rgb-primary-color));
+
+  --ease-out: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-in: cubic-bezier(0.75, 0, 1, 1);
+  --ease-in-out: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease: cubic-bezier(0.44, 0.21, 0, 1);
+
   --gradient-primary: linear-gradient(
     92.72deg,
     var(--color-primary) 0%,

@@ -1,0 +1,14 @@
+.iconWrapper > svg {
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper {
+  box-shadow: 2px 2px 2px 2px rgba(var(--rgb-primary-color), 0.12);
+  transition: transform 0.4s var(--ease-in-out);
+}
+
+.wrapper:hover {
+  transform: translateY(-8px);
+  transition: transform 0.2s var(--ease-out);
+}

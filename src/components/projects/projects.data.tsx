@@ -1,16 +1,30 @@
-import { SiReact } from 'react-icons/si';
+import {
+  SiAngular,
+  SiCsharp,
+  SiMaterialui,
+  SiNextdotjs,
+  SiReact,
+} from 'react-icons/si';
 import { Project } from './projects.types';
 
 export const projectsData: Project[] = [
   {
-    title: 'React clear carousel',
+    title: 'Random student',
     description:
-      'Some information about my carousel because the carousel is cool and fun and i Love to iuse this when I do nothing',
-    emoji: '💅',
+      'App made in course to random the student for presentation.In react with many thing very cool and I was happy to do that.',
+    emoji: '🎲',
     technologies: [
       {
         title: 'React',
         icon: <SiReact />,
+      },
+      {
+        title: 'NextJS',
+        icon: <SiNextdotjs />,
+      },
+      {
+        title: 'Mui',
+        icon: <SiMaterialui />,
       },
     ],
     links: {
@@ -19,14 +33,22 @@ export const projectsData: Project[] = [
     },
   },
   {
-    title: 'React clear carousel',
+    title: 'HolyDraw',
     description:
-      'Some information about my carousel because the carousel is cool and fun and i Love to iuse this when I do nothing',
-    emoji: '💅',
+      'It was a great experience to create HolyDraw, my first web game and I am very happy with the result. Unfortunately, the game is now closed.',
+    emoji: '🎨',
     technologies: [
       {
         title: 'React',
         icon: <SiReact />,
+      },
+      {
+        title: 'csharp',
+        icon: <SiCsharp />,
+      },
+      {
+        title: 'mui',
+        icon: <SiMaterialui />,
       },
     ],
     links: {
@@ -35,14 +57,18 @@ export const projectsData: Project[] = [
     },
   },
   {
-    title: 'React clear carousel',
+    title: 'QoQlick',
     description:
-      'Some information about my carousel because the carousel is cool and fun and i Love to iuse this when I do nothing',
-    emoji: '💅',
+      'Clicker app to win some items. The project was created during a course and inspired by QoQa.ch',
+    emoji: '🖱',
     technologies: [
       {
-        title: 'React',
+        title: 'Angular',
         icon: <SiReact />,
+      },
+      {
+        title: 'csharp',
+        icon: <SiCsharp />,
       },
     ],
     links: {

@@ -104,6 +104,7 @@ export const skillsData: SkillList[] = [
       {
         title: 'vercel, aws & heroku',
         icon: <img src="/icons/vercel-rainbow.svg" />,
+        isRainbow: true,
       },
       {
         title: 'firebase',

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React, { FormEvent } from 'react';
+import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
 import Email from '../src/icons/Email';
 import styles from '../styles/Emails.module.css';
 
@@ -42,23 +43,7 @@ export default function emails() {
           Les méthodes, techniques et astuce simple pour devenir un meilleur dev
           et être épanoui dans son travail.
         </p>
-        <form
-          onSubmit={handleSubmit}
-          className="flex flex-col items-center gap-4 sm:gap-6 w-full"
-        >
-          <input
-            className="bg-paper border-primary border-2 px-2 py-2 rounded-md w-full text-textPrimary"
-            placeholder="Ton address mail"
-            type="email"
-            id="email"
-          />
-          <button
-            type="submit"
-            className="bg-primary text-black px-6 py-3 w-full rounded-md"
-          >
-            Rejoindre
-          </button>
-        </form>
+        <EmailsForm placeholder="Ton address email" />
         <p className="text-textSecondary text-xs">
           🔒 Les emails sont gratuits, vos données resteront sécurisé et vous
           pourez vous désinscrire à tout moment.

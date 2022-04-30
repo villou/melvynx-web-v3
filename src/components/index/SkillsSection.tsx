@@ -1,12 +1,12 @@
 import React from 'react';
 import { skillsData } from '../base/skill/skill.data';
 import { SkillItem } from '../base/skill/SkillItem';
+import { Section } from './Section';
 
 export function SkillsSection() {
   return (
-    <div>
-      <h2 className="text-4xl text-center">Skills</h2>
-      <div className="flex justify-between mt-8">
+    <Section title="Skills">
+      <div className="flex justify-between">
         {skillsData.map((skill) => (
           <div>
             <h3 className="text-2xl font-bold">{skill.title}</h3>
@@ -20,6 +20,6 @@ export function SkillsSection() {
           </div>
         ))}
       </div>
-    </div>
+    </Section>
   );
 }
