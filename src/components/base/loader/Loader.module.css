@@ -1,0 +1,16 @@
+@keyframes spin {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.loader {
+  animation: spin 1000ms;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  margin: auto;
+}

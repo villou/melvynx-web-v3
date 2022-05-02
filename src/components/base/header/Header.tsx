@@ -4,7 +4,7 @@ import HeaderItem from './HeaderItem';
 
 export function Header() {
   return (
-    <div className="flex items-center">
+    <header className="flex items-center">
       <img
         className="w-10 h-10 mr-auto"
         src="/icons/melvynx.svg"
@@ -17,6 +17,6 @@ export function Header() {
           ))}
         </ul>
       </nav>
-    </div>
+    </header>
   );
 }

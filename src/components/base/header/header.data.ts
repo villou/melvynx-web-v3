@@ -9,14 +9,10 @@ export const headerData: HeaderItem[] = [
     text: 'Projects',
     link: '#projects',
   },
-  {
-    text: 'Formations',
-    link: '#formation',
-  },
-  {
-    text: 'Project',
-    link: '#project',
-  },
+  // {
+  //   text: 'Formations',
+  //   link: '#formation',
+  // },
   {
     text: 'Contact',
     link: '#contact',

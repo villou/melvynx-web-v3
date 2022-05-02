@@ -5,6 +5,10 @@ type Data = {
   name: string;
 };
 
+const getUrl = (email: string) => {
+  return `https://assets.mailerlite.com/jsonp/31712/forms/53915443112445919/subscribe?callback=jQuery18308587922972304468_1651522141189&fields[email]=${email}&ml-submit=1&anticsrf=true&ajax=1&guid=bf8dc5ca-618d-0180-6994-5383829a025a&_=1651522151865`;
+};
+
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -14,34 +18,21 @@ export default async function handler(
     return;
   }
 
-  const body = JSON.parse(req.body);
-  const email = body as string;
+  const body = JSON.parse(req.body) as { email: string };
 
-  if (!email) {
+  if (!body) {
     res.status(400).end();
     return;
   }
 
-  const result = await fetch(
-    'https://connect.mailerlite.com/api/v2/subscribers',
-    {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-        'X-MailerLite-ApiKey': process.env.MAILERLITE_TOKEN ?? '',
-      },
-      body: JSON.stringify({
-        email,
-        fields: {
-          from: body.from ?? 'website',
-        },
-      }),
-    }
-  );
+  const result = await fetch(getUrl(body.email), {
+    method: 'GET',
+  });
 
-  const resultBody = await result.json();
-  console.log(resultBody);
+  if (result.ok) {
+    res.status(204).end();
+    return;
+  }
 
-  res.status(204).end();
+  res.status(404).end();
 }

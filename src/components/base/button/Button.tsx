@@ -1,12 +1,14 @@
 import clsx from 'clsx';
 import Link from 'next/link';
 import React from 'react';
+import { Loader } from '../loader/Loader';
 import styles from './Button.module.css';
 
 type ButtonProps = {
   variant?: 'light' | 'primary';
   icon?: React.ReactNode;
   href?: string;
+  loading?: boolean;
 } & React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -14,21 +16,40 @@ type ButtonProps = {
 
 const getLinkElement = (href: string) => (href.includes('http') ? 'a' : Link);
 
-export function Button({ icon, children, href = '', ...props }: ButtonProps) {
+export function Button({
+  icon,
+  children,
+  variant,
+  href = '',
+  loading,
+  disabled,
+  ...props
+}: ButtonProps) {
   const LinkIfNeeded = href ? getLinkElement(href) : 'div';
 
   return (
-    <button {...props}>
+    <button {...props} disabled={disabled}>
       <LinkIfNeeded href={href}>
         <span
           className={clsx(
-            styles.button,
-            'px-4 py-3 bg-paper rounded-full flex gap-2 items-center text-white text-xl transition',
-            'hover:bg-paperLight'
+            'px-4 py-3 bg-paper rounded-full flex gap-2 items-center justify-center text-white text-lg transition',
+            'hover:bg-paperLight',
+            {
+              'bg-primary text-black hover:bg-primaryDark':
+                variant === 'primary',
+              [styles.button]: !disabled,
+              'bg-gray-600 hover:bg-gray-600': disabled,
+            }
           )}
         >
-          {icon}
-          <span>{children}</span>
+          {loading ? (
+            <Loader />
+          ) : (
+            <>
+              {icon}
+              <span>{children}</span>
+            </>
+          )}
         </span>
       </LinkIfNeeded>
     </button>
