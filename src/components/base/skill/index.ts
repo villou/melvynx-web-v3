@@ -1,1 +1,1 @@
-export * from '../../index/SkillsSection';
+export * from './SkillItem';
