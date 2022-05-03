@@ -9,7 +9,7 @@ export function SkillsSection() {
       <Section title="Skills">
         <div className="flex justify-between">
           {skillsData.map((skill) => (
-            <div>
+            <div key={skill.title}>
               <h3 className="text-2xl font-bold">{skill.title}</h3>
               <ul className="flex flex-col gap-2 mt-4">
                 {skill.items.map((item) => (
