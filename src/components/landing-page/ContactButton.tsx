@@ -11,16 +11,21 @@ export default function ContactButton() {
       <Button href="https://github.com/Melvynx" icon={<SiGithub />}>
         Github
       </Button>
-      <Button
+      {/* <Button
         href="https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA"
         icon={<SiYoutube />}
       >
         Youtube
-      </Button>
+      </Button> */}
       <Button href="/emails" icon={<HiMail />}>
         Newsletter
       </Button>
-      <Button icon={<SiLinkedin />}>LinkedIn</Button>
+      <Button
+        href="https://www.linkedin.com/in/melvyn-malherbe/"
+        icon={<SiLinkedin />}
+      >
+        LinkedIn
+      </Button>
     </div>
   );
 }
