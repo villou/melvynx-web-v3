@@ -11,7 +11,7 @@ export const projectsData: Project[] = [
   {
     title: 'Random student',
     description:
-      'App made in course to random the student for presentation.In react with many thing very cool and I was happy to do that.',
+      'Random app to choose student to present his project. I made this app for my teacher who using an ugly website. You can use this site to random everything, obviously.',
     emoji: '🎲',
     technologies: [
       {
@@ -28,14 +28,14 @@ export const projectsData: Project[] = [
       },
     ],
     links: {
-      github: 'ht',
-      website: 'ht',
+      github: 'https://github.com/Melvynx/random-student',
+      website: 'https://random-student.vercel.app/',
     },
   },
   {
     title: 'HolyDraw',
     description:
-      'It was a great experience to create HolyDraw, my first web game and I am very happy with the result. Unfortunately, the game is now closed.',
+      "HolyDraw is a game application with the concept of GarticPhone. It's my first game app created with friends. I'm happy with the result. Unfortunately, the game is now closed.",
     emoji: '🎨',
     technologies: [
       {
@@ -52,14 +52,14 @@ export const projectsData: Project[] = [
       },
     ],
     links: {
-      github: 'ht',
-      website: 'ht',
+      github: 'https://github.com/Melvynx/holydraw',
+      website: 'https://holydraw.vercel.app/',
     },
   },
   {
     title: 'QoQlick',
     description:
-      'Clicker app to win some items. The project was created during a course and inspired by QoQa.ch',
+      'Clicker app to win items when you are the X th to click. The project was created during a course and inspired by QoQa.ch. The website can no longer work.',
     emoji: '🖱',
     technologies: [
       {
@@ -72,8 +72,11 @@ export const projectsData: Project[] = [
       },
     ],
     links: {
-      github: 'ht',
-      website: 'ht',
+      github: 'https://github.com/Melvynx/qoqo-app',
+      website: 'https://qoqo.azurewebsites.net',
     },
   },
+  // {
+  //   title: '',
+  // },
 ];

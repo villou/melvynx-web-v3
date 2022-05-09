@@ -5,7 +5,7 @@ import { Button } from '../base/button';
 export default function ContactButton() {
   return (
     <div className="flex gap-2 flex-wrap">
-      <Button href="https://github.com/Melvynx" icon={<SiTwitter />}>
+      <Button href="https://twitter.com/melvynxdev" icon={<SiTwitter />}>
         Twitter
       </Button>
       <Button href="https://github.com/Melvynx" icon={<SiGithub />}>
