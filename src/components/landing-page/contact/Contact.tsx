@@ -1,7 +1,7 @@
 import { HiMail } from 'react-icons/hi';
-import { Button } from '../base/button';
-import ContactButton from './ContactButton';
-import { Section } from './Section';
+import { Button } from '../../base/button';
+import ContactButton from '../ContactButton';
+import { Section } from '../Section';
 
 export const Contact = () => {
   return (

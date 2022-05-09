@@ -1,0 +1,44 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+
+  height: 600px;
+
+  grid-template-areas:
+    'epr epr epr epr epr epr adr adr'
+    'tjs tjs tjs tjs css css css css';
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    height: 400px;
+  }
+}
+
+.grid > div {
+  overflow: hidden;
+  border-radius: 16px;
+  position: relative;
+}
+
+.force-height {
+  width: 100% !important;
+}
+
+.epicReact {
+  grid-area: epr;
+}
+
+.threeJs {
+  grid-area: tjs;
+}
+
+.cssForJsDev {
+  grid-area: css;
+}
+
+.androidDev {
+  grid-area: adr;
+}

@@ -1,11 +1,12 @@
 import { Header } from '~/components/base/header';
 import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
-import { Contact } from '~/components/landing-page/Contact';
-import Footer from '~/components/landing-page/Footer';
-import { Profile } from '~/components/landing-page/Profile';
+import { Contact } from '~/components/landing-page/contact/Contact';
+import Footer from '~/components/footer/Footer';
+import { Profile } from '~/components/landing-page/profile/Profile';
 import { Section } from '~/components/landing-page/Section';
-import { SkillsSection } from '~/components/landing-page/SkillsSection';
+import { SkillsSection } from '~/components/landing-page/skills/SkillsSection';
 import ProjectsSection from '~/components/projects/ProjectsSection';
+import { CoursesSection } from '~/components/landing-page/courses/CoursesSection';
 
 export default function Home() {
   return (
@@ -25,6 +26,7 @@ export default function Home() {
 
         <SkillsSection />
         <ProjectsSection />
+        <CoursesSection />
         <Contact />
         <Footer />
       </div>

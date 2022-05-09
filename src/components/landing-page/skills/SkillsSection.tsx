@@ -1,7 +1,7 @@
 import React from 'react';
-import { skillsData } from '../base/skill/skill.data';
-import { SkillItem } from '../base/skill';
-import { Section } from './Section';
+import { skillsData } from '../../base/skill/skill.data';
+import { SkillItem } from '../../base/skill';
+import { Section } from '../Section';
 
 export function SkillsSection() {
   return (

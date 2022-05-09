@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
-import ContactButton from './ContactButton';
+import ContactButton from '../ContactButton';
 import styles from './Profile.module.css';
 
 export const Profile = ({ className }: { className?: string }) => (

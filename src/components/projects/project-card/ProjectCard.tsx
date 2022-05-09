@@ -39,7 +39,11 @@ export const ProjectCard = ({
       <p>{project.description}</p>
       <div className="flex gap-2">
         {project.technologies.map((technology) => (
-          <Chip icon={technology.icon} title={technology.title} />
+          <Chip
+            key={technology.title}
+            icon={technology.icon}
+            title={technology.title}
+          />
         ))}
       </div>
     </div>

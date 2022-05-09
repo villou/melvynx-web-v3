@@ -8,7 +8,11 @@ export default function ProjectsSection() {
     <Section title="Projects">
       <div className="flex flex-wrap gap-8">
         {projectsData.map((project) => (
-          <ProjectCard className="flex-1" project={project} />
+          <ProjectCard
+            key={project.title}
+            className="flex-1"
+            project={project}
+          />
         ))}
       </div>
     </Section>
