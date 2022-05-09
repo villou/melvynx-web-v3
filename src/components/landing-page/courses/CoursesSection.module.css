@@ -1,19 +1,19 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 256px);
+  grid-gap: 2rem;
 
   height: 600px;
 
   grid-template-areas:
-    'epr epr epr epr epr epr adr adr'
-    'tjs tjs tjs tjs css css css css';
+    'epr epr epr adr'
+    'tjs tjs css css';
 }
 
 @media screen and (max-width: 768px) {
   .grid {
-    height: 400px;
+    grid-gap: 1rem;
   }
 }
 
@@ -23,8 +23,8 @@
   position: relative;
 }
 
-.force-height {
-  width: 100% !important;
+.forceHeight > * {
+  height: 100% !important;
 }
 
 .epicReact {

@@ -9,7 +9,7 @@ export function CoursesSection() {
   return (
     <Section title="Courses">
       <div className={styles.grid}>
-        <div className={clsx(styles.epicReact, 'force-height')}>
+        <div className={clsx(styles.epicReact, styles.forceHeight)}>
           <Image
             objectFit="cover"
             src="/images/epic-react.png"
