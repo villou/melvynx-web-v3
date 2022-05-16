@@ -8,7 +8,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Melvynx</title>
       </Head>
-      <div className="min-h-full max-w-6xl m-auto p-4">
+      <div className="min-h-full max-w-6xl m-auto p-4 relative">
         <Component {...pageProps} />
       </div>
     </>

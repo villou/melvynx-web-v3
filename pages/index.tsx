@@ -13,7 +13,7 @@ export default function Home() {
     <div className="min-h-full">
       <Header />
       <Profile />
-      <div className="flex flex-col gap-8 mt-16 sm:mt-0 sm:gap-20 items-center">
+      <div className="flex flex-col gap-12 mt-16 sm:mt-0 sm:gap-20 items-center">
         <Section title="Join the Devlynx team and get best tips !">
           <div className="max-w-lg m-auto flex flex-col gap-4">
             <EmailsForm />

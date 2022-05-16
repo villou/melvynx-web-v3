@@ -8,7 +8,7 @@ const height = 350;
 export function CoursesSection() {
   return (
     <Section title="Courses">
-      <div className={styles.grid}>
+      <div className={clsx(styles.grid, 'h-fit')}>
         <div className={clsx(styles.epicReact, styles.forceHeight)}>
           <Image
             objectFit="cover"

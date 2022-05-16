@@ -54,7 +54,6 @@ rules:
   prefer-rest-params: error
   prefer-spread: error
   prefer-template: error
-  sort-imports: 'off'
   symbol-description: error
 
   '@typescript-eslint/member-ordering': error

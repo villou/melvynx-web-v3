@@ -6,6 +6,7 @@ module.exports = {
         primary: '#28F1FE',
         primaryDark: '#06BBC6',
         background: '#04082E',
+        backgroundOpacity: '#04082E20',
         paper: '#141B52',
         paperLight: '#1F287A',
         textPrimary: '#D4E8F7',
@@ -13,6 +14,15 @@ module.exports = {
       },
       fontFamily: {
         mono: ['Fira Code', 'monospace'],
+      },
+      keyframes: {
+        swipeFromLeft: {
+          '0%': { transform: 'translateX(100%)' },
+          '50%': { transform: 'translateX(0)' },
+        },
+      },
+      animation: {
+        swipeFromLeft: 'swipeFromLeft 500ms ease-out',
       },
     },
   },

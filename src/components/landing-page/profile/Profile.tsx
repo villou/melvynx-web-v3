@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Image from 'next/image';
+import { animated, useSpring } from 'react-spring';
 import ContactButton from '../ContactButton';
 import styles from './Profile.module.css';
 
@@ -16,26 +17,59 @@ export const Profile = ({ className }: { className?: string }) => (
         <p className="text-gradient-primary text-2xl font-bold relative right-2">
           Hey there! I'm -
         </p>
-        <h1 className="text-7xl font-bold text-gradient-primary">
-          Melvyn Malherbe.
-        </h1>
+        <Title />
       </div>
       <p className="text-4xl text-textSecondary">
-        <b className="text-textPrimary">Software Enginner.</b> Self-taught from
-        a young age and then in a company
+        <b className="text-textPrimary">Software Enginner.</b> Self-taught since
+        I was 12 years old, then apprenticed in a company
       </p>
       <ContactButton />
     </div>
     <div className="w-fit">
-      <div className="w-32 h-32 sm:w-fit sm:h-fit">
-        <Image
-          width={400}
-          height={400}
-          className={clsx('rounded-full', styles.picture)}
-          src="/images/my-face.png"
-          alt="face of melvyn"
-        />
-      </div>
+      <Picture />
     </div>
   </div>
 );
+
+const Picture = () => {
+  const style = useSpring({
+    from: { transform: 'scale(0) rotate(-160deg)' },
+    to: { transform: 'scale(1) rotate(0deg)' },
+    config: {
+      tension: 100,
+      friction: 12,
+      mass: 1.2,
+    },
+  });
+  return (
+    <animated.div style={style} className="w-44 h-44 sm:w-fit sm:h-fit">
+      <Image
+        width={400}
+        height={400}
+        className={clsx('rounded-full', styles.picture)}
+        src="/images/my-face.png"
+        alt="face of melvyn"
+      />
+    </animated.div>
+  );
+};
+
+const Title = () => {
+  const style = useSpring({
+    from: { transform: 'scale(0)' },
+    to: { transform: 'scale(1)' },
+    config: {
+      tension: 100,
+      friction: 10,
+    },
+  });
+
+  return (
+    <animated.h1
+      style={style}
+      className="text-7xl font-bold text-gradient-primary"
+    >
+      Melvyn Malherbe.
+    </animated.h1>
+  );
+};

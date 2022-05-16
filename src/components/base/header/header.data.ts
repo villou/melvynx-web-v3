@@ -4,6 +4,7 @@ export const headerData: HeaderItem[] = [
   {
     text: 'Skills',
     link: '#skills',
+    customClasses: 'hidden sm:block',
   },
   {
     text: 'Projects',
