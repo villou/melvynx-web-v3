@@ -43,7 +43,7 @@ export default function emails() {
           Les méthodes, techniques et astuce simple pour devenir un meilleur dev
           et être épanoui dans son travail.
         </p>
-        <EmailsForm placeholder="Ton address email" />
+        <EmailsForm placeholder="Ton adresse mail" />
         <p className="text-textSecondary text-xs">
           🔒 Les emails sont gratuits, vos données resteront sécurisé et vous
           pourez vous désinscrire à tout moment.
