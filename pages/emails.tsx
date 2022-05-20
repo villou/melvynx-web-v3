@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import React, { FormEvent } from 'react';
 import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
+import { Profile } from '~/components/landing-page/profile/Profile';
 import styles from '../styles/Emails.module.css';
 
 type EmailType = {
@@ -41,6 +42,9 @@ export default function emails() {
         <p className="text-base text-textSecondary ">
           Les méthodes, techniques et astuce simple pour devenir un meilleur dev
           et être épanoui dans son travail.
+          <br />
+          Je t'accompagne pour que tu puisse devenir un développeur{' '}
+          <b>rentier</b> en partant de 0 et que tu puisse enfin être libre.
         </p>
         <EmailsForm placeholder="Ton adresse mail" />
         <p className="text-textSecondary text-xs">
@@ -48,6 +52,16 @@ export default function emails() {
           pourez vous désinscrire à tout moment.
         </p>
       </div>
+      <div className="my-20">
+        <Profile
+          className=""
+          upperName="Hey toi! Je suis -"
+          descriptionHighlight="Développeur."
+          description="Je suis passionné par le développement. J'ai envie de partager mes connaissances et mes expériences avec vous."
+          fullScreenSize={false}
+        />
+      </div>
+      <div className="my-20"></div>
     </>
   );
 }
