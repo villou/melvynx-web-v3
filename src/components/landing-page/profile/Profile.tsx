@@ -19,7 +19,7 @@ export const Profile = ({ className }: { className?: string }) => (
         </p>
         <Title />
       </div>
-      <p className="text-4xl text-textSecondary">
+      <p className="text-3xl sm:text-4xl text-textSecondary">
         <b className="text-textPrimary">Software Enginner.</b> Self-taught since
         I was 12 years old, then apprenticed in a company
       </p>
@@ -67,7 +67,7 @@ const Title = () => {
   return (
     <animated.h1
       style={style}
-      className="text-7xl font-bold text-gradient-primary"
+      className="text-6xl sm:text-7xl font-bold text-gradient-primary"
     >
       Melvyn Malherbe.
     </animated.h1>

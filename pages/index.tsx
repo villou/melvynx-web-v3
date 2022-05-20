@@ -14,8 +14,12 @@ export default function Home() {
       <Header />
       <Profile />
       <div className="flex flex-col gap-12 mt-16 sm:mt-0 sm:gap-20 items-center">
-        <Section title="Join the Devlynx team and get best tips !">
+        <Section title="Join de DevLynx club !">
           <div className="max-w-lg m-auto flex flex-col gap-4">
+            <p>
+              You will receive a weekly email with developer news, my discovery
+              of the week and tips that I use.
+            </p>
             <EmailsForm />
             <p className="text-base text-center">
               🔒 The emails are free and in french 🇫🇷, your data will remain

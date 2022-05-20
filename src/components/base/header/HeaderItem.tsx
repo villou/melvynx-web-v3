@@ -23,7 +23,7 @@ export default function HeaderItem({
       onMouseEnter={() => trigger()}
       className={className}
     >
-      <a href={link} className="text-lg md:text-base">
+      <a href={link} className="text-2xl md:text-base">
         <span className="font-mono text-primary">{place}.</span>{' '}
         <span>{text}</span>
       </a>

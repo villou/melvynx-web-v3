@@ -22,7 +22,7 @@ module.exports = {
         },
       },
       animation: {
-        swipeFromLeft: 'swipeFromLeft 500ms ease-out',
+        swipeFromLeft: 'swipeFromLeft 500ms var(--ease-out)',
       },
     },
   },

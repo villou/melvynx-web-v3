@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import React, { FormEvent } from 'react';
 import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
-import Email from '../src/icons/Email';
 import styles from '../styles/Emails.module.css';
 
 type EmailType = {
