@@ -4,16 +4,16 @@ import React from 'react';
 import { Loader } from '../loader/Loader';
 import styles from './Button.module.css';
 
-type ButtonProps = {
+type ButtonProps = React.DetailedHTMLProps<
+  React.ButtonHTMLAttributes<HTMLButtonElement>,
+  HTMLButtonElement
+> & {
   variant?: 'light' | 'primary';
   icon?: React.ReactNode;
   href?: string;
   loading?: boolean;
   fullRounded?: boolean;
-} & React.DetailedHTMLProps<
-  React.ButtonHTMLAttributes<HTMLButtonElement>,
-  HTMLButtonElement
->;
+};
 
 const getLinkElement = (href: string) => (href.includes('http') ? 'a' : Link);
 

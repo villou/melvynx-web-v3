@@ -1,7 +1,6 @@
-import React from 'react';
-
+// in progress
 export default function InView() {
-  const ref = React.useRef<HTMLDivElement>(null);
+  // const ref = React.useRef<HTMLDivElement>(null);
 
-  return () => <div ref={ref}>InView</div>;
+  return null;
 }

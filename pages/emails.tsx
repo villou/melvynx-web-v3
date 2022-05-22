@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { PropsWithChildren } from 'react';
+import { Button } from '~/components/base/button';
 import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
 import Footer from '~/components/footer/Footer';
 import { Profile } from '~/components/landing-page/profile/Profile';
@@ -33,6 +34,20 @@ export default function emails() {
           🔒 Les emails sont gratuits, vos données resteront sécurisé et vous
           pourez vous désinscrire à tout moment.
         </p>
+      </div>
+      <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto mt-4 sm:mt-8">
+        <Body>
+          Tu en veux plus ? Réserve 1h avec moi pour parler de tes objectifs et
+          trouver le meilleur moyen de les atteindre.
+        </Body>
+        <Button
+          href="https://calendly.com/melvynx/bilan-developer"
+          className="w-full"
+          variant="light"
+          fullRounded={false}
+        >
+          Fixe un rendez-vous avez moi
+        </Button>
       </div>
       <div className="my-20">
         <Profile
