@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { FormEvent, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import { Button } from '~/components/base/button';
 
 type EmailsFormProps = {
@@ -14,12 +14,7 @@ export function EmailsForm({
   callToAction = 'Join',
   successMessage = 'Thanks for subscribing! Check your inbox!',
   errorMessage = 'Something went wrong, please try again.',
-}: {
-  placeholder?: string;
-  callToAction?: string;
-  successMessage?: string;
-  errorMessage?: string;
-}) {
+}: EmailsFormProps) {
   const [isLoading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
@@ -27,8 +22,6 @@ export function EmailsForm({
     e.preventDefault();
 
     setLoading(true);
-
-    const query = new URLSearchParams(window.location.search);
 
     const value = e.currentTarget.email.value;
 
@@ -76,6 +69,7 @@ export function EmailsForm({
         className="w-full"
         variant="primary"
         loading={isLoading}
+        fullRounded={false}
       >
         {callToAction}
       </Button>

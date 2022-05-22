@@ -9,6 +9,7 @@ type ButtonProps = {
   icon?: React.ReactNode;
   href?: string;
   loading?: boolean;
+  fullRounded?: boolean;
 } & React.DetailedHTMLProps<
   React.ButtonHTMLAttributes<HTMLButtonElement>,
   HTMLButtonElement
@@ -23,6 +24,7 @@ export function Button({
   href = '',
   loading,
   disabled,
+  fullRounded = true,
   ...props
 }: ButtonProps) {
   const LinkIfNeeded = href ? getLinkElement(href) : 'div';
@@ -32,13 +34,15 @@ export function Button({
       <LinkIfNeeded href={href}>
         <span
           className={clsx(
-            'px-4 py-3 bg-paper rounded-full flex gap-2 items-center justify-center text-white text-lg transition',
+            'px-4 py-3 bg-paper flex gap-2 items-center justify-center text-white text-lg transition',
             'hover:bg-paperLight',
             {
               'bg-primary text-black hover:bg-primaryDark':
                 variant === 'primary',
               [styles.button]: !disabled,
               'bg-gray-600 hover:bg-gray-600': disabled,
+              'rounded-md': !fullRounded,
+              'rounded-full': fullRounded,
             }
           )}
         >
