@@ -1,0 +1,14 @@
+.important-line-height-1-1 {
+  /* ! I need to override tailwind style */
+  line-height: 1.1 !important;
+}
+
+.header-h1-fluid {
+  font-size: clamp(3rem, 5vw + 1rem, 6rem);
+  line-height: 1.1;
+}
+
+.header-h2-fluid {
+  font-size: clamp(1.5rem, 1.3vw + 1rem, 2.2rem);
+  line-height: 1.1;
+}
