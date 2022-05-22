@@ -19,9 +19,6 @@ rules:
   linebreak-style:
     - error
     - unix
-  quotes:
-    - error
-    - single
   semi:
     - error
     - always
@@ -55,6 +52,7 @@ rules:
   prefer-spread: error
   prefer-template: error
   symbol-description: error
+  no-unused-vars: error
 
   '@typescript-eslint/member-ordering': error
   '@typescript-eslint/method-signature-style': error
@@ -84,11 +82,8 @@ rules:
   '@typescript-eslint/type-annotation-spacing': error
   '@typescript-eslint/unified-signatures': error
 
+  'react/no-unescaped-entities': 0
+
   arrow-body-style:
     - error
     - as-needed
-
-  sort-imports:
-    - error
-    - ignoreCase
-    - ignoreDeclarationSort
