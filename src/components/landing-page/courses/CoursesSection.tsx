@@ -15,6 +15,7 @@ export function CoursesSection() {
             src="/images/epic-react.png"
             width={1144}
             height={height}
+            alt="epic react dev"
           />
         </div>
         <div className={styles.threeJs}>
@@ -24,6 +25,7 @@ export function CoursesSection() {
             src="/images/threejs-journey.png"
             width={1200}
             height={height}
+            alt="threejs journey"
           />
         </div>
         <div className={styles.cssForJsDev}>
@@ -33,6 +35,7 @@ export function CoursesSection() {
             src="/images/css-for-js-dev.jpeg"
             width={1280}
             height={height}
+            alt="css-for-js dev courses"
           />
         </div>
         <div className={styles.androidDev}>
@@ -42,6 +45,7 @@ export function CoursesSection() {
             src="/images/android-dev.png"
             width={640}
             height={height}
+            alt="android dev courses"
           />
         </div>
       </div>
