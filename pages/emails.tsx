@@ -46,7 +46,7 @@ export default function emails() {
           variant="light"
           fullRounded={false}
         >
-          Fixe un rendez-vous avez moi
+          Prends un rendez-vous avec moi
         </Button>
       </div>
       <div className="my-20">
