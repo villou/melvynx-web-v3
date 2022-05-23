@@ -1,21 +1,21 @@
-import { SkillList } from './types';
+/* eslint-disable @next/next/no-img-element */
 import {
-  SiMaterialui,
-  SiStyledcomponents,
-  SiThreedotjs,
-  SiSvelte,
-  SiCss3,
   SiAndroid,
-  SiFastify,
-  SiIos,
   SiCsharp,
-  SiPostgresql,
-  SiGithub,
-  SiJest,
-  SiVercel,
-  SiFirebase,
+  SiCss3,
   SiDocker,
+  SiFastify,
+  SiFirebase,
+  SiGithub,
+  SiIos,
+  SiJest,
+  SiMaterialui,
+  SiPostgresql,
+  SiStyledcomponents,
+  SiSvelte,
+  SiThreedotjs,
 } from 'react-icons/si';
+import { SkillList } from './types';
 
 export const skillsData: SkillList[] = [
   {

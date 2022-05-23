@@ -1,10 +1,4 @@
-import {
-  SiAngular,
-  SiCsharp,
-  SiMaterialui,
-  SiNextdotjs,
-  SiReact,
-} from 'react-icons/si';
+import { SiCsharp, SiMaterialui, SiNextdotjs, SiReact } from 'react-icons/si';
 import { Project } from './projects.types';
 
 export const projectsData: Project[] = [
