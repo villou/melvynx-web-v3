@@ -25,12 +25,21 @@ export default function ContactButtons({
         </Button>
       )}
       {activeLinks.includes('twitter') && (
-        <Button href="https://twitter.com/melvynxdev" icon={<SiTwitter />}>
+        <Button
+          onClick={() => {
+            gtag('event', 'go_to_twitter');
+          }}
+          href="https://twitter.com/melvynxdev"
+          icon={<SiTwitter />}
+        >
           Twitter
         </Button>
       )}
       {activeLinks.includes('youtube') && (
         <Button
+          onClick={() => {
+            gtag('event', 'go_to_youtube');
+          }}
           href="https://www.youtube.com/channel/UC5HDIVwuqoIuKKw-WbQ4CvA"
           icon={<SiYoutube />}
         >
@@ -38,12 +47,21 @@ export default function ContactButtons({
         </Button>
       )}
       {activeLinks.includes('newsletter') && (
-        <Button href="/emails" icon={<HiMail />}>
+        <Button
+          onClick={() => {
+            gtag('event', 'go_to_mail_page');
+          }}
+          href="/emails"
+          icon={<HiMail />}
+        >
           Newsletter
         </Button>
       )}
       {activeLinks.includes('linkedin') && (
         <Button
+          onClick={() => {
+            gtag('event', 'go_to_linkedin');
+          }}
           href="https://www.linkedin.com/in/melvyn-malherbe/"
           icon={<SiLinkedin />}
         >
@@ -51,7 +69,13 @@ export default function ContactButtons({
         </Button>
       )}
       {activeLinks.includes('mail') && (
-        <Button href="mailto:contact@melvynx.com" icon={<HiMail />}>
+        <Button
+          onClick={() => {
+            gtag('event', 'contact_by_email');
+          }}
+          href="mailto:contact@melvynx.com"
+          icon={<HiMail />}
+        >
           contact@melvynx.com
         </Button>
       )}

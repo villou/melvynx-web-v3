@@ -1,39 +1,47 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import React from 'react';
 import { Button } from '~/components/base/button';
 import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
 import Footer from '~/components/footer/Footer';
 import { Profile } from '~/components/landing-page/profile/Profile';
 import { Body } from '~/components/library/Typography';
-import styles from '../styles/Emails.module.css';
 
-export default function emails() {
+export default function DevDebutantRessource() {
   return (
     <>
       <Head>
         <title>Les Astuces Privées du Lynx</title>
       </Head>
-      <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto mt-4 sm:mt-8">
+      <div className="max-w-2xl m-auto">
         <Image
-          className={`w-24 h-24 ${styles.icon}`}
-          src="/icons/email.svg"
+          src="/images/dev-debutant-ressource.png"
           alt="Email"
-          width={96}
-          height={96}
+          width={7496}
+          height={4236}
         />
-        <h1 className="text-4xl">Les Astuces Privées du Lynx</h1>
-        <Body>
-          Les méthodes, techniques et astuce simple pour devenir un meilleur dev
-          et être épanoui dans son travail.
-          <br />
-          Je t'accompagne pour que tu puisse devenir un développeur{' '}
-          <b>rentier</b> en partant de 0 et que tu puisse enfin être libre.
-        </Body>
-        <EmailsForm callToAction="Rejoindre" placeholder="Ton adresse mail" />
-        <p className="text-textSecondary text-xs">
-          🔒 Les emails sont gratuits, vos données resteront sécurisé et vous
-          pourez vous désinscrire à tout moment.
-        </p>
+        <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-1xl m-auto mt-4 sm:mt-8">
+          <h1 className="text-4xl">
+            Obtiens gratuitement ma ressource pour commencer le développement
+          </h1>
+          <Body>
+            Les méthodes, techniques et astuce simple pour devenir un meilleur
+            dev et être épanoui dans son travail.
+            <br />
+            Je t'accompagne pour que tu puisse devenir un développeur{' '}
+            <b>rentier</b> en partant de 0 et que tu puisse enfin être libre.
+          </Body>
+          <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto">
+            <EmailsForm
+              callToAction="Recevoir"
+              placeholder="Ton adresse mail pour envoyer la ressource"
+            />
+            <p className="text-textSecondary text-xs">
+              🔒 Les emails sont gratuits, vos données resteront sécurisés et
+              vous pourez vous désinscrire à tout moment.
+            </p>
+          </div>
+        </div>
       </div>
       <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto mt-4 sm:mt-8">
         <Body>

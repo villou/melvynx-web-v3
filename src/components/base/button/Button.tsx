@@ -34,7 +34,7 @@ export function Button({
       <LinkIfNeeded href={href}>
         <span
           className={clsx(
-            'px-4 py-3 bg-paper flex gap-2 items-center justify-center text-white text-lg transition',
+            'px-4 py-3 bg-paper flex gap-2 items-center justify-center text-white text-lg transition bg-green',
             'hover:bg-paperLight',
             {
               'bg-primary text-black hover:bg-primaryDark':

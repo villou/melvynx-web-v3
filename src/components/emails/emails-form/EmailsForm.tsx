@@ -70,6 +70,9 @@ export function EmailsForm({
         variant="primary"
         loading={isLoading}
         fullRounded={false}
+        onClick={() => {
+          gtag('event', 'add_to_newsletter');
+        }}
       >
         {callToAction}
       </Button>
