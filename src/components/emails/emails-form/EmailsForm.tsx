@@ -7,6 +7,7 @@ type EmailsFormProps = {
   callToAction?: string;
   successMessage?: string;
   errorMessage?: string;
+  endpoint?: string;
 };
 
 export function EmailsForm({
@@ -14,6 +15,7 @@ export function EmailsForm({
   callToAction = 'Join',
   successMessage = 'Thanks for subscribing! Check your inbox!',
   errorMessage = 'Something went wrong, please try again.',
+  endpoint = 'add-emails',
 }: EmailsFormProps) {
   const [isLoading, setLoading] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
@@ -27,7 +29,7 @@ export function EmailsForm({
 
     const data = { email: value };
 
-    fetch('/api/add-emails', {
+    fetch(`/api/${endpoint}`, {
       method: 'POST',
       body: JSON.stringify(data),
     })

@@ -1,13 +1,41 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '~/components/base/button';
 import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
 import Footer from '~/components/footer/Footer';
 import { Profile } from '~/components/landing-page/profile/Profile';
 import { Body } from '~/components/library/Typography';
 
+const getWebsite = (from: string | null) => {
+  switch (from) {
+    case 'i':
+      return 'instagram';
+    case 'f':
+      return 'facebook';
+    case 't':
+      return 'twitter';
+    case 'l':
+      return 'linkedin';
+    default:
+      return 'normal';
+  }
+};
+
 export default function DevDebutantRessource() {
+  useEffect(() => {
+    // get query params
+    const query = new URLSearchParams(window.location.search);
+    // get the f param
+    const from = query.get('f');
+
+    gtag('event', 'view_page', {
+      event_category: 'dev_debutant_ressource',
+      event_label: 'dev_debutant_ressource',
+      method: getWebsite(from),
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -22,19 +50,30 @@ export default function DevDebutantRessource() {
         />
         <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-1xl m-auto mt-4 sm:mt-8">
           <h1 className="text-4xl">
-            Obtiens gratuitement ma ressource pour commencer le développement
+            Obtiens gratuitement ma ressource et deviens le développeur que tu
+            as toujours rêvé d'être ! 💻
           </h1>
           <Body>
-            Les méthodes, techniques et astuce simple pour devenir un meilleur
-            dev et être épanoui dans son travail.
+            Le monde du développement t'intéresses mais tu ne sais pas par où
+            commencer et tu as trop peur de te lancer dans l'inconnu ? A l'aide
+            des connaissances que j'ai acquises durant 4 ans, j'ai créé pour toi
+            une ressource interactive complètement gratuite.
             <br />
-            Je t'accompagne pour que tu puisse devenir un développeur{' '}
-            <b>rentier</b> en partant de 0 et que tu puisse enfin être libre.
+            <br />
+            Elle va te permettre de définir et de comprendre ce qui est fait
+            pour toi mais elle va également te faire gagner un temps précieux
+            pour obtenir les réponses que tu recherches rapidement et te
+            permettre de réinvestir ce temps dans ton apprentissage.
+            <br />
+            <br />
+            Tu auras toutes les clés en main pour bien débuter, donc à toi de
+            jouer !
           </Body>
           <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto">
             <EmailsForm
               callToAction="Recevoir"
-              placeholder="Ton adresse mail pour envoyer la ressource"
+              placeholder="Ton adresse mail sur laquelle tu recevras la ressource"
+              endpoint="dev-debutant-ressource"
             />
             <p className="text-textSecondary text-xs">
               🔒 Les emails sont gratuits, vos données resteront sécurisés et
