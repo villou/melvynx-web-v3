@@ -52,7 +52,6 @@ rules:
   prefer-spread: error
   prefer-template: error
   symbol-description: error
-  no-unused-vars: error
 
   '@typescript-eslint/member-ordering': error
   '@typescript-eslint/method-signature-style': error
