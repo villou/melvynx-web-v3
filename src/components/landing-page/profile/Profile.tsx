@@ -1,11 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import clsx from 'clsx';
 import Image from 'next/image';
+import { IoIosArrowDown } from 'react-icons/io';
 import { animated, useSpring } from 'react-spring';
+import { FadeUpInView, InView } from '~/components/hooks-based/InView';
+import { useHasScroll } from '~/hooks/useHasScroll';
 import ContactButtons from '../ContactButtons';
 import styles from './Profile.module.css';
-import { IoIosArrowDown } from 'react-icons/io';
-import { useHasScroll } from '~/hooks/useHasScroll';
 
 type ProfileProps = {
   className?: string;
@@ -38,21 +39,40 @@ export const Profile = ({
           alt="decoration point"
           className={styles.pointBg}
         />
-        <p className="text-gradient-primary text-2xl font-bold relative right-2">
-          {upperName}
-        </p>
+        <FadeUpInView>
+          <p
+            className="text-gradient-primary text-2xl font-bold relative right-2"
+            style={{ transitionDelay: '100ms' }}
+          >
+            {upperName}
+          </p>
+        </FadeUpInView>
 
-        <h1 className="header-h1-fluid font-bold text-gradient-primary">
-          {name}
-        </h1>
-        <p className="header-h2-fluid text-textSecondary">
-          <b className="text-textPrimary">{descriptionHighlight}</b>{' '}
-          {description}
-        </p>
+        <FadeUpInView>
+          <h1
+            className="header-h1-fluid font-bold text-gradient-primary"
+            style={{ transitionDelay: '200ms' }}
+          >
+            {name}
+          </h1>
+        </FadeUpInView>
+        <FadeUpInView>
+          <p
+            className="header-h2-fluid text-textSecondary"
+            style={{ transitionDelay: '300ms' }}
+          >
+            <b className="text-textPrimary">{descriptionHighlight}</b>{' '}
+            {description}
+          </p>
+        </FadeUpInView>
       </div>
-      <ContactButtons
-        activeLinks={['github', 'newsletter', 'linkedin', 'twitter']}
-      />
+      <FadeUpInView>
+        <div style={{ transitionDelay: '400ms' }}>
+          <ContactButtons
+            activeLinks={['github', 'newsletter', 'linkedin', 'twitter']}
+          />
+        </div>
+      </FadeUpInView>
     </div>
     <div className="w-fit">
       <Picture />
