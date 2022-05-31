@@ -14,10 +14,10 @@ export function Header() {
 }
 
 const HeaderDesktop = () => (
-  <div className="items-center hidden md:flex">
+  <div className="items-center hidden md:flex py-4">
     <img className="w-10 h-10 mr-auto" src="/icons/melvynx.svg" alt="Melvynx" />
     <nav>
-      <ul className="flex items-baseline gap-4">
+      <ul className="flex items-baseline gap-6">
         {headerData.map((item, index) => (
           <HeaderItem
             key={index}
