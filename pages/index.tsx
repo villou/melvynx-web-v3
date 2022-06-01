@@ -13,7 +13,7 @@ export default function Home() {
     <div className="min-h-full">
       <Header />
       <Profile />
-      <div className="flex flex-col gap-12 mt-16 sm:mt-0 sm:gap-20 items-center">
+      <div className="flex flex-col gap-12 mt-16 sm:mt-0 sm:gap-24 items-center">
         <SkillsSection />
         <ProjectsSection />
         <CoursesSection />
