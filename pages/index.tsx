@@ -14,6 +14,10 @@ export default function Home() {
       <Header />
       <Profile />
       <div className="flex flex-col gap-12 mt-16 sm:mt-0 sm:gap-20 items-center">
+        <SkillsSection />
+        <ProjectsSection />
+        <CoursesSection />
+        <Contact />
         <Section title="Join de DevLynx club !">
           <div className="max-w-lg m-auto flex flex-col gap-4">
             <p>
@@ -27,11 +31,6 @@ export default function Home() {
             </p>
           </div>
         </Section>
-
-        <SkillsSection />
-        <ProjectsSection />
-        <CoursesSection />
-        <Contact />
         <Footer />
       </div>
     </div>

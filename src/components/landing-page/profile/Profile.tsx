@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 import { IoIosArrowDown } from 'react-icons/io';
 import { animated, useSpring } from 'react-spring';
-import { FadeUpInView, InView } from '~/components/hooks-based/InView';
+import { FadeUpInView } from '~/components/hooks-based/InView';
 import { useHasScroll } from '~/hooks/useHasScroll';
 import ContactButtons from '../ContactButtons';
 import styles from './Profile.module.css';
@@ -39,35 +39,26 @@ export const Profile = ({
           alt="decoration point"
           className={styles.pointBg}
         />
-        <FadeUpInView>
-          <p
-            className="text-gradient-primary text-2xl font-bold relative right-2"
-            style={{ transitionDelay: '100ms' }}
-          >
+        <FadeUpInView delay={300}>
+          <p className="text-gradient-primary text-2xl font-bold relative right-2">
             {upperName}
           </p>
         </FadeUpInView>
 
-        <FadeUpInView>
-          <h1
-            className="header-h1-fluid font-bold text-gradient-primary"
-            style={{ transitionDelay: '200ms' }}
-          >
+        <FadeUpInView delay={400}>
+          <h1 className="header-h1-fluid font-bold text-gradient-primary">
             {name}
           </h1>
         </FadeUpInView>
-        <FadeUpInView>
-          <p
-            className="header-h2-fluid text-textSecondary"
-            style={{ transitionDelay: '300ms' }}
-          >
+        <FadeUpInView delay={500}>
+          <p className="header-h2-fluid text-textSecondary sm:mt-4">
             <b className="text-textPrimary">{descriptionHighlight}</b>{' '}
             {description}
           </p>
         </FadeUpInView>
       </div>
-      <FadeUpInView>
-        <div style={{ transitionDelay: '400ms' }}>
+      <FadeUpInView delay={600}>
+        <div>
           <ContactButtons
             activeLinks={['github', 'newsletter', 'linkedin', 'twitter']}
           />
