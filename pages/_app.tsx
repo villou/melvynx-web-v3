@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <title>Melvynx</title>
+        <title>Melvyn Malherbe • Développeur</title>
       </Head>
       <div className="min-h-full max-w-6xl m-auto p-4 relative">
         <Component {...pageProps} />

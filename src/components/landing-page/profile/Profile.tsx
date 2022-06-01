@@ -21,8 +21,8 @@ export const Profile = ({
   className,
   upperName = "Hey there! I'm -",
   name = 'Melvyn Malherbe',
-  descriptionHighlight = 'Software Enginner.',
-  description = 'Self-taught since I was 12 years old, then apprenticed in a company',
+  descriptionHighlight = 'Software Engineer.',
+  description = 'Self-taught since I was 14 years old, then apprenticed in a company',
   fullScreenSize = true,
 }: ProfileProps) => (
   <div
