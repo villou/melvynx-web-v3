@@ -23,6 +23,7 @@ export default function Document() {
           href="meta/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="color-scheme" content="dark" />
       </Head>
       <body>
         <Main />
