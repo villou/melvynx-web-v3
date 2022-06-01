@@ -1,6 +1,7 @@
 import React from 'react';
 import { CgClose } from 'react-icons/cg';
 import { HiMenu } from 'react-icons/hi';
+import { FadeUpInView } from '~/components/hooks-based/InView';
 import { headerData } from './header.data';
 import HeaderItem from './HeaderItem';
 
@@ -15,18 +16,26 @@ export function Header() {
 
 const HeaderDesktop = () => (
   <div className="items-center hidden md:flex py-4">
-    <img className="w-10 h-10 mr-auto" src="/icons/melvynx.svg" alt="Melvynx" />
+    <FadeUpInView>
+      <img
+        className="w-10 h-10 mr-auto"
+        src="/icons/melvynx.svg"
+        alt="Melvynx"
+      />
+    </FadeUpInView>
     <nav>
-      <ul className="flex items-baseline gap-6">
-        {headerData.map((item, index) => (
-          <HeaderItem
-            key={index}
-            place={index}
-            className={item.customClasses}
-            {...item}
-          />
-        ))}
-      </ul>
+      <FadeUpInView delay={100}>
+        <ul className="flex items-baseline gap-6">
+          {headerData.map((item, index) => (
+            <HeaderItem
+              key={index}
+              place={index}
+              className={item.customClasses}
+              {...item}
+            />
+          ))}
+        </ul>
+      </FadeUpInView>
     </nav>
   </div>
 );
