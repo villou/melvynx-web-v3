@@ -17,16 +17,21 @@ export function InView({
 
 export function FadeUpInView({
   children,
+  delay = 0,
+  threshold = 0.5,
 }: {
   children: JSX.Element;
+  delay?: number;
+  threshold?: number;
 }): JSX.Element {
   const ref = useRef<HTMLElement>(null);
-  const inView = useInView(ref, { threshold: 0.5 });
+  const inView = useInView(ref, { threshold: threshold, triggerOnce: true });
 
   return cloneElement(children, {
     ref: ref,
     className: clsx(children.props.className, 'fadeup-enter', {
       'fadeup-enter-done': inView,
     }),
+    style: { transitionDelay: `${delay}ms`, ...children.props.style },
   });
 }
