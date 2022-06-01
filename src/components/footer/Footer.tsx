@@ -9,7 +9,7 @@ export default function Footer() {
       </div>
 
       <p>Designed and built by Melvyn Malherbe</p>
-      <p>@Copywritting Melvynx</p>
+      <p>@Copywrite Melvynx</p>
     </footer>
   );
 }
