@@ -25,7 +25,7 @@ export default function Document() {
         <link rel="manifest" href="/site.webmanifest" />
         <meta name="color-scheme" content="dark" />
         {/* Primary Meta Tags */}
-        ap <meta name="title" content="Melvyn Malherbe • Développeur" />
+        <meta name="title" content="Melvyn Malherbe • Développeur" />
         <meta
           name="description"
           content="Software Engineer. Web creator about Code. Mentor for people who want to learn more and faster."
