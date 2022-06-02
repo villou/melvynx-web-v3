@@ -50,8 +50,8 @@ export default function DevDebutantRessource() {
         />
         <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-1xl m-auto mt-4 sm:mt-8">
           <h1 className="text-4xl">
-            Obtiens gratuitement ma ressource et deviens le développeur que tu
-            as toujours rêvé d'être ! 💻
+            Obtiens gratuitement ma ressource pour suivre la méthode "pas à pas"
+            👍
           </h1>
           <Body>
             Le monde du développement t'intéresses mais tu ne sais pas par où
@@ -74,6 +74,7 @@ export default function DevDebutantRessource() {
               callToAction="Recevoir"
               placeholder="Ton adresse mail sur laquelle tu recevras la ressource"
               endpoint="dev-debutant-ressource"
+              successMessage="Merci pour ton inscription, tu recevras la ressource dans 2 secondes dans ta boîte mail. Regarde bien les spams si tu ne la reçois pas."
             />
             <p className="text-textSecondary text-xs">
               🔒 Les emails sont gratuits, vos données resteront sécurisés et

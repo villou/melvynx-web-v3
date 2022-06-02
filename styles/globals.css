@@ -39,6 +39,7 @@
 
 body {
   @apply bg-background text-textPrimary;
+  scroll-behavior: smooth;
 }
 
 .text-gradient-primary {
@@ -46,6 +47,8 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* toute la carte */
 
 /*
   Josh's Custom CSS Reset
