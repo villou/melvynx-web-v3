@@ -29,7 +29,11 @@ export default function emails() {
           Je t'accompagne pour que tu puisse devenir un développeur{' '}
           <b>rentier</b> en partant de 0 et que tu puisse enfin être libre.
         </Body>
-        <EmailsForm callToAction="Rejoindre" placeholder="Ton adresse mail" />
+        <EmailsForm
+          endpoint="add-emails-mailchimp"
+          callToAction="Rejoindre"
+          placeholder="Ton adresse mail"
+        />
         <p className="text-textSecondary text-xs">
           🔒 Les emails sont gratuits, vos données resteront sécurisé et vous
           pourez vous désinscrire à tout moment.
