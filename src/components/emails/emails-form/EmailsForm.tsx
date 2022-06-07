@@ -13,7 +13,7 @@ type EmailsFormProps = {
 export function EmailsForm({
   placeholder = 'Your email address',
   callToAction = 'Join',
-  successMessage = 'Thanks for subscribing! Check your inbox!',
+  successMessage = 'Thanks for subscribing! Check your inbox and add me in your contact!',
   errorMessage = 'Something went wrong, please try again.',
   endpoint = 'add-emails',
 }: EmailsFormProps) {
@@ -67,7 +67,7 @@ export function EmailsForm({
         </p>
       )}
       <Button
-        disabled={message !== null}
+        disabled={message === successMessage}
         className="w-full"
         variant="primary"
         loading={isLoading}

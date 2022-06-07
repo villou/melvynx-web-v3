@@ -22,11 +22,13 @@ export default async function handler(
     return;
   }
 
-  const response = await mailchimpClient.lists.addListMember('899541', {
-    email_address: 'Ebony_Brekke@gmail.com',
+  const response = await mailchimpClient.lists.addListMember('e486e62638', {
+    email_address: body.email,
     status: 'subscribed',
   });
-  console.log(response);
 
-  res.status(200).end();
+  if (response.status === 200) {
+    res.status(201);
+  }
+  res.status(400).end();
 }
