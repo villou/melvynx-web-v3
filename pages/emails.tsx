@@ -41,7 +41,7 @@ export default function emails() {
           trouver le meilleur moyen de les atteindre.
         </Body>
         <Button
-          href="https://calendly.com/melvynx/bilan-developer"
+          href="https://calendly.com/melvynx/coaching-cadeau"
           className="w-full"
           variant="light"
           fullRounded={false}
