@@ -89,7 +89,7 @@ export default function DevDebutantRessource() {
           trouver le meilleur moyen de les atteindre.
         </Body>
         <Button
-          href="https://calendly.com/melvynx/coaching-cadeau"
+          href="https://calendly.com/melvynx/bilan-developer"
           className="w-full"
           variant="light"
           fullRounded={false}
