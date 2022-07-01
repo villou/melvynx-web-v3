@@ -7,7 +7,7 @@ import HeaderItem from './HeaderItem';
 
 export function Header() {
   return (
-    <header className="">
+    <header>
       <HeaderDesktop />
       <HeaderMobile />
     </header>

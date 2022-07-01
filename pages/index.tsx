@@ -7,10 +7,12 @@ import { Section } from '~/components/landing-page/Section';
 import { SkillsSection } from '~/components/landing-page/skills/SkillsSection';
 import ProjectsSection from '~/components/projects/ProjectsSection';
 import { CoursesSection } from '~/components/landing-page/courses/CoursesSection';
+import AnimatedBlob from '~/components/blob/AnimatedBlob';
 
 export default function Home() {
   return (
     <div className="min-h-full">
+      <AnimatedBlob />
       <Header />
       <Profile />
       <div className="flex flex-col gap-12 mt-16 sm:mt-0 sm:gap-24 items-center">

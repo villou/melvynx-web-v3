@@ -1,33 +1,48 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { Button } from '~/components/base/button';
+import AnimatedBlob from '~/components/blob/AnimatedBlob';
 import { EmailsForm } from '~/components/emails/emails-form/EmailsForm';
 import Footer from '~/components/footer/Footer';
 import { Profile } from '~/components/landing-page/profile/Profile';
 import { Body } from '~/components/library/Typography';
-import styles from '../styles/Emails.module.css';
+import styles from '../styles/modules/Emails.module.css';
 
 export default function emails() {
   return (
     <>
       <Head>
-        <title>Les Astuces Privées du Lynx</title>
+        <title>Les mails privé de melvynx.dev</title>
       </Head>
-      <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto mt-4 sm:mt-8">
+      <AnimatedBlob />
+      <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto mt-4 sm:mt-8 relative">
         <Image
-          className={`w-24 h-24 ${styles.icon}`}
-          src="/icons/email.svg"
+          className={`${styles.icon}`}
+          src="/images/mail-3d-icons.png"
           alt="Email"
-          width={96}
-          height={96}
+          width={192}
+          height={192}
+          // style={{ overflow: 'visible' }}
+          layout="raw"
         />
-        <h1 className="text-4xl">Les Astuces Privées du Lynx</h1>
+
+        <h1 className="text-4xl">Les mails privé de melvynx.dev</h1>
         <Body>
           Les méthodes, techniques et astuce simple pour devenir un meilleur dev
           et être épanoui dans son travail.
           <br />
-          Je t'accompagne pour que tu puisse devenir un développeur{' '}
-          <b>rentier</b> en partant de 0 et que tu puisse enfin être libre.
+          C'est le seul endroit où je partage les meilleures techniques et
+          méthodes que j'ai apprises au fil des années.
+        </Body>
+        <ul className="text-base text-textSecondary">
+          <li>Conseil pour trouver un job de développeur</li>
+          <li>Veille technique sur le web, le mobile et des outiles cool</li>
+          <li>Tutoriel complet sur des sujets qui me passionne</li>
+          <li>Nouvelles sur mes activités en ligne</li>
+        </ul>
+        <br />
+        <Body>
+          Rejoins la tribu, on est plus de 300 développeurs passionnés.
         </Body>
         <EmailsForm callToAction="Rejoindre" placeholder="Ton adresse mail" />
         <p className="text-textSecondary text-xs">

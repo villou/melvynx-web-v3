@@ -2,7 +2,7 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 import { IoIosArrowDown } from 'react-icons/io';
-import { animated, useSpring } from 'react-spring';
+import { animated, useSpring } from '@react-spring/web';
 import { FadeUpInView } from '~/components/hooks-based/InView';
 import { useHasScroll } from '~/hooks/useHasScroll';
 import ContactButtons from '../ContactButtons';
@@ -46,7 +46,12 @@ export const Profile = ({
         </FadeUpInView>
 
         <FadeUpInView delay={400}>
-          <h1 className="header-h1-fluid font-bold text-gradient-primary">
+          <h1
+            className={clsx(
+              'header-h1-fluid font-bold text-gradient-primary',
+              styles.nameHighlight
+            )}
+          >
             {name}
           </h1>
         </FadeUpInView>

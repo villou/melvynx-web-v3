@@ -6,58 +6,80 @@ import styles from './CoursesSection.module.css';
 
 const height = 350;
 
+type Course = {
+  src: string;
+  alt: string;
+  width: number;
+  className?: string;
+};
+
+const courses: Course[] = [
+  {
+    src: '/images/epic-react.png',
+    alt: 'Epic React dev',
+    width: 1144,
+    className: clsx(styles.epicReact, styles.forceHeight),
+  },
+  {
+    src: '/images/threejs-journey.png',
+    alt: 'Threejs journey',
+    width: 1200,
+    className: styles.threeJs,
+  },
+  {
+    src: '/images/css-for-js-dev.jpeg',
+    alt: 'CSS for JS dev',
+    width: 1280,
+    className: styles.cssForJsDev,
+  },
+  {
+    src: '/images/android-dev.png',
+    alt: 'android dev courses',
+    width: 640,
+    className: styles.androidDev,
+  },
+];
+
 export function CoursesSection() {
   return (
     <Section title="Courses">
       <div className={clsx(styles.grid, 'h-fit')}>
-        <FadeUpInView delay={100}>
-          <div className={clsx(styles.epicReact, styles.forceHeight)}>
-            <Image
-              objectFit="cover"
-              src="/images/epic-react.png"
-              width={1144}
-              height={height}
-              alt="epic react dev"
-            />
-          </div>
-        </FadeUpInView>
-        <FadeUpInView delay={200}>
-          <div className={styles.threeJs}>
-            <Image
-              layout="fill"
-              objectFit="cover"
-              src="/images/threejs-journey.png"
-              width={1200}
-              height={height}
-              alt="threejs journey"
-            />
-          </div>
-        </FadeUpInView>
-        <FadeUpInView delay={300}>
-          <div className={styles.cssForJsDev}>
-            <Image
-              layout="fill"
-              objectFit="cover"
-              src="/images/css-for-js-dev.jpeg"
-              width={1280}
-              height={height}
-              alt="css-for-js dev courses"
-            />
-          </div>
-        </FadeUpInView>
-        <FadeUpInView delay={400}>
-          <div className={styles.androidDev}>
-            <Image
-              layout="fill"
-              objectFit="cover"
-              src="/images/android-dev.png"
-              width={640}
-              height={height}
-              alt="android dev courses"
-            />
-          </div>
-        </FadeUpInView>
+        {courses.map((course) => (
+          <CourseImage
+            src={course.src}
+            className={course.className}
+            key={course.src}
+            alt={course.alt}
+            width={course.width}
+            height={height}
+          />
+        ))}
       </div>
     </Section>
+  );
+}
+
+function CourseImage({
+  className,
+  src,
+  alt,
+  width,
+  height,
+}: Course & {
+  height: number;
+}) {
+  return (
+    <FadeUpInView delay={400}>
+      <div className={className}>
+        <Image
+          layout="fill"
+          objectFit="cover"
+          src={src}
+          width={width}
+          height={height}
+          alt={alt}
+        />
+      </div>
+    </FadeUpInView>
   );
 }

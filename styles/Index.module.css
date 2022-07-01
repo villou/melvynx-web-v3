@@ -1,9 +1,0 @@
-.profileHeight {
-  min-height: calc(100vh - 40px - 32px);
-}
-
-.pointBg {
-  left: -16px;
-  top: -16px;
-  position: absolute;
-}

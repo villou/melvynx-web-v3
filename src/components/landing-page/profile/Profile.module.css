@@ -15,3 +15,7 @@
 .picture:hover {
   filter: hue-rotate(30deg);
 }
+
+.nameHighlight {
+  filter: drop-shadow(0 0 2rem rgba(var(--rgb-primary-color), 0.5));
+}
