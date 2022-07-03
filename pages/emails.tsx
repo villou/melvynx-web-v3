@@ -12,7 +12,7 @@ export default function emails() {
   return (
     <>
       <Head>
-        <title>Les mails privé de melvynx.dev</title>
+        <title>Les mails privés de melvynx.dev</title>
       </Head>
       <AnimatedBlob />
       <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto mt-4 sm:mt-8 relative">
@@ -26,18 +26,18 @@ export default function emails() {
           layout="raw"
         />
 
-        <h1 className="text-4xl">Les mails privé de melvynx.dev</h1>
+        <h1 className="text-4xl">Les mails privés de melvynx.dev</h1>
         <Body>
-          Les méthodes, techniques et astuce simple pour devenir un meilleur dev
+          Les méthodes, techniques et astuces simples pour devenir un meilleur dev
           et être épanoui dans son travail.
           <br />
           C'est le seul endroit où je partage les meilleures techniques et
           méthodes que j'ai apprises au fil des années.
         </Body>
         <ul className="text-base text-textSecondary">
-          <li>Conseil pour trouver un job de développeur</li>
-          <li>Veille technique sur le web, le mobile et des outiles cool</li>
-          <li>Tutoriel complet sur des sujets qui me passionne</li>
+          <li>Conseils pour trouver un job de développeur</li>
+          <li>Veilles techniques sur le web, le mobile et des outils cool</li>
+          <li>Tutoriels complets sur des sujets qui me passionnent</li>
           <li>Nouvelles sur mes activités en ligne</li>
         </ul>
         <br />
@@ -46,8 +46,8 @@ export default function emails() {
         </Body>
         <EmailsForm callToAction="Rejoindre" placeholder="Ton adresse mail" />
         <p className="text-textSecondary text-xs">
-          🔒 Les emails sont gratuits, vos données resteront sécurisé et vous
-          pourez vous désinscrire à tout moment.
+          🔒 Les emails sont gratuits, vos données resteront sécurisées et vous
+          pourrez vous désinscrire à tout moment.
         </p>
       </div>
       <div className="flex flex-col items-center gap-6 sm:gap-8 text-center max-w-lg m-auto mt-4 sm:mt-8">
